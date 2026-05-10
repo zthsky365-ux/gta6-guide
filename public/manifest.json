@@ -1,0 +1,29 @@
+{
+  "name": "GTA6 游戏攻略",
+  "short_name": "GTA6攻略",
+  "description": "GTA6 游戏攻略网站，提供完整的游戏攻略、任务流程、技巧提示",
+  "start_url": "/gta6-guide/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#f59e0b",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/gta6-guide/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/gta6-guide/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/gta6-guide/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [],
+  "categories": ["games", "education"]
+}

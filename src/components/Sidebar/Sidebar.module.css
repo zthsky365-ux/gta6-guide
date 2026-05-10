@@ -1,0 +1,96 @@
+/* Sidebar.module.css */
+.sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f59e0b;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.navLink {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  color: #d1d5db;
+  font-size: 0.9rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+}
+
+.navLink:hover {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.navLink.active {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+.adSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* 移动端适配 */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .section {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .adSection {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: column;
+  }
+
+  .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .navLink {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
