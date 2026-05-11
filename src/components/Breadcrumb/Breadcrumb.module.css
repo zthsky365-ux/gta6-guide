@@ -1,0 +1,42 @@
+/* Breadcrumb.module.css */
+.breadcrumb {
+  padding: 0.75rem 0;
+  margin-bottom: 1rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.separator {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.link {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #f59e0b;
+}
+
+.current {
+  color: #d1d5db;
+  font-weight: 500;
+}

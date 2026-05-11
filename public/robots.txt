@@ -1,0 +1,11 @@
+# robots.txt for GTA6 Guide Website
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://yourusername.github.io/gta6-guide/sitemap.xml
+
+# Disallow admin or private paths (if any)
+Disallow: /admin/
+Disallow: /private/
