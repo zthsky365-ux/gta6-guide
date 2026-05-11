@@ -3,6 +3,12 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
 
+export function generateStaticParams() {
+  return sampleArticles.map((article) => ({
+    slug: article.slug,
+  }));
+}
+
 interface ArticlePageProps {
   params: Promise<{ slug: string }>;
 }
@@ -221,11 +227,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   }
 
   const categoryLabels: Record<string, string> = {
-    news: '资讯',
-    guide: '攻略',
-    walkthrough: '流程',
-    tips: '技巧',
-    download: '下载',
+    news: 'News',
+    guide: 'Guide',
+    walkthrough: 'Walkthrough',
+    tips: 'Tips',
+    download: 'Download',
   };
 
   const relatedArticles = sampleArticles
@@ -241,7 +247,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             href="/"
             className="inline-flex items-center gap-1 text-gray-400 hover:text-white text-sm mb-6 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4" /> 返回首页
+            <ArrowLeft className="w-4 h-4" /> Back to Home
           </Link>
 
           <div className="mb-4">
@@ -262,7 +268,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               <Calendar className="w-4 h-4" /> {article.date}
             </span>
             <span className="flex items-center gap-1">
-              <Clock className="w-4 h-4" /> {article.readTime} 分钟
+              <Clock className="w-4 h-4" /> {article.readTime} min
             </span>
           </div>
 
@@ -290,7 +296,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         {/* Source attribution */}
         <div className="mt-8 p-4 rounded-lg bg-[#16213e]/50 border border-gray-700/30">
           <p className="text-sm text-gray-400">
-            📖 本文内容参考自游民星空等游戏媒体，仅供参考。实际游戏内容以官方发布为准。
+            📖 This article references content from gaming media outlets for informational purposes only. Actual game content is subject to the official release.
           </p>
         </div>
 
